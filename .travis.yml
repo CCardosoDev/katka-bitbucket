@@ -21,11 +21,10 @@ before_deploy:
   - git tag $TRAVIS_TAG
 
 deploy:
-  skip_cleanup: true
   provider: releases
-  api_key: "testing"
-  file:
-    - "README.md"
+  api_key:
+    secure: bbE1kfjvRjFFFApq75oNrihdg4sQYQgWvYvKtdgKqKhhGB4j4pDH8sGZAiUdJ8FxT8d9sPs7sb9Jq5fwJNkToxNtkhM+StS+rCRMqDDyfeSy4FLF6jcw04/YIg1LmSLQYr84F7vpctUCIlx+1TdSTZ2FcwCpLxMk+ncc6tQCp5jMxKwpcrp269R6KwaMZ5iN00Ez27jiY8Wq0PLRQPItgwZ2BuL3amfl8WvaRd0TSCBk9FD++VEBGf/XhxqTCb2DlS2rUuMrjsBxYKuv9EwfiUrS+k2tfEs38TmOVhq84Hjla9XQ6819aU7YSW8LSsmN5aMd4LZiHJMcuFC+mEuvK7cCmdSMNQQMuCn0h5womrSBK7rCRYyuKEfHGg3RXbyZz5eU2Pk7TAhdJiSF8NulGvI+uHnnWTpAWVJR8LyYNk96wDs5gGql21MImEUGoliRPwAs6YuF8juEA8ZxEALlpDafWp861078X8wtFVDMDwIRCVfvzKNZ4eDa57H5UfGuXCPKAq1XEIC6WZSy77NSQPilw19mfDCO7wvdQSzatjDFxIWJmnQrs9Plmlpj4tkq6Kdo8sUdXvjUQU0SFXpxea+tV+QVRUZF63FqRiKay8qYF7QkGSBCznx79LoaBD+nmeTW/dCavV7JmC3wt2b0c1J2m6iIHI/MTK9tZg3fszU=
+  skip_cleanup: true
   on:
     tags: false
     all_branches: false
