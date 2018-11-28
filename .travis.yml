@@ -23,9 +23,8 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: releases
-  api_key: "testing"
-  file:
-    - "README.md"
+  api_key:
+    secure: "eWi30ITyhqyxzdzh/YmUd0TRJ6q3vj+Yf3YkgLgzluvlUOaLGCQKndtufJHo63s+/2m/BvI0aK8uono3JbSHOg6vkswiIr9XdOnTp61zqkbAb/F9oXEklt4X44XyaPN/0moryuxfxFO2CoQp/HDT/vYFKVMqdYpxV5Xk6a3zh8IFprQNQRLJu1FHeCfVZtTrNXRw4z9pM/rRcAIBZHrrZHbaj3ZGZXoj2cguAMf+lgJLjlVauw/iG7pcWUG8MtnS5E+w2wjMfIUjVNRbqPQ7r0hAM/biFvIsT7dcXL/mXwWGI+myW1MdGOX3MaSO/JQmxt3Rumu8JaKyVzycnA8lO7OpwiGo1MaMMXKq4lyKRyN06QInti6jYSVWYnKaJMYrCYVg18w3eOdz+nOHtFdcRRwGcM5HRaQfEPSu1sO5LZqKSh/eBoTbcXLSbmNeQaWjrn7a7CAKqhlC3zGiLxk9ABZy7YvwrnxpCuqnXz82u0ryQWV6eIXRGJsKYZ4nk6L5RzT2ZYHrU9Mxhh9WKurz6LH2UI/ZRwN9ylUuFr4Mu0dfJ+Qf2zZb7TVZtqPVx0H1t5K2ZswC2GqvFAFfrwhxEXv54GcrQQChilCN8+OOzl6MLfxz+JkeblIvkWJCsT1kfGGKWBHVPtlf56hIrJVucIEtl4UgvZlC90Ech06ItwA="
   on:
     tags: false
     all_branches: false
