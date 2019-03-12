@@ -1,6 +1,7 @@
+from dataclasses import dataclass
+
 import requests
 from bitbucket.exceptions import http_request_exception_to_api
-from dataclasses import dataclass
 
 
 @dataclass

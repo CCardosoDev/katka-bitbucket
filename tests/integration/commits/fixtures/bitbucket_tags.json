@@ -1,0 +1,33 @@
+{
+    "size": 3,
+    "limit": 3,
+    "isLastPage": false,
+    "start": 0,
+    "nextPageStart": 3,
+    "values": [
+        {
+            "id": "refs/tags/0.14.1",
+            "displayId": "0.14.1",
+            "type": "TAG",
+            "latestCommit": "7c3d7a55b847f234249936c229bd974626b08a99",
+            "latestChangeset": "7c3d7a55b847f234249936c229bd974626b08a99",
+            "hash": "02f36a6f629f252f8f770830377b15d6a3972fdb"
+        },
+        {
+            "id": "refs/tags/0.14.0",
+            "displayId": "0.14.0",
+            "type": "TAG",
+            "latestCommit": "7c3d7a55b847f234249936c229bd974626b08a99",
+            "latestChangeset": "7c3d7a55b847f234249936c229bd974626b08a99",
+            "hash": "66f3527f5a9ce398f3ba01507894f79d1b16a0c3"
+        },
+        {
+            "id": "refs/tags/0.13.8",
+            "displayId": "0.13.8",
+            "type": "TAG",
+            "latestCommit": "3068d41ca8c22ea515007285e69464ffbc2003a9",
+            "latestChangeset": "3068d41ca8c22ea515007285e69464ffbc2003a9",
+            "hash": "5fd67150a35d04270c878a2b26b5c3c5f5fde7f9"
+        }
+    ]
+}

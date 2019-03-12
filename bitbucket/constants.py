@@ -53,3 +53,10 @@ BITBUCKET_MERGES_CONTROL_SERVICE_MAP = {
 
 # Datetime ###
 MAX_TIMESTAMP = 9999999999
+
+# Tags ###
+DEFAULT_COMMIT_HISTORY_TAGS_LIMIT = 25  # default limit for number of tags to fetch on getting commit history
+
+# Result Messages
+RESPONSE_OK = 'OK'
+RESPONSE_ERROR_FETCHING_TAGS = 'ERROR_FETCHING_TAGS'

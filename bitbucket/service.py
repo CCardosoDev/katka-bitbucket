@@ -1,5 +1,4 @@
 import logging
-
 from dataclasses import asdict, dataclass
 
 from .base import KatkaService

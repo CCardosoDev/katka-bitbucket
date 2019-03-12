@@ -1,6 +1,7 @@
 from django.urls import reverse
 
 import mock
+from bitbucket import constants
 from bitbucket.exceptions import ProjectNotFoundAPIException
 
 
@@ -61,9 +62,11 @@ class TestGetBitbucketCommitsView:
                         'name': 'captain.america@kpn.com',
                         'slug': 'cc501',
                         'display_name': 'America, Captain'
-                    }
+                    },
+                    'tags': []
                 }
-            ]
+            ],
+            'message': constants.RESPONSE_OK
         }
 
     @mock.patch('bitbucket.views.BitbucketCommits')

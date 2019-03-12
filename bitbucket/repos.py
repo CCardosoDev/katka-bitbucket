@@ -1,5 +1,4 @@
 import logging
-
 from dataclasses import dataclass
 
 from .service import BitbucketService
@@ -14,4 +13,4 @@ class BitbucketRepos(BitbucketService):
     def get_repos(self, params: dict = None) -> dict:
         path = f'projects/{self.project_key}/repos'
 
-        return super().get(path=path, params=params)
+        return self.get(path=path, params=params)

@@ -6,6 +6,8 @@ from requests import HTTPError, RequestException
 from rest_framework import status
 from rest_framework.exceptions import APIException, AuthenticationFailed, NotFound, PermissionDenied
 
+from . import constants
+
 
 class BitbucketBaseAPIException(APIException):
     pass
@@ -19,6 +21,10 @@ class BadRequestAPIException(BitbucketBaseAPIException):
     status_code = status.HTTP_400_BAD_REQUEST
     default_detail = 'Bad request.'
     default_code = 'bad_request'
+
+
+class NoTagsCouldBeFetchedException(Exception):
+    code = constants.RESPONSE_ERROR_FETCHING_TAGS
 
 
 @contextmanager

@@ -21,12 +21,13 @@ class BitbucketResponse(serializers.Serializer):
     next_page_start = serializers.IntegerField(
         required=False, source='nextPageStart'
     )  # the index of the first element of the next page
+    message = serializers.CharField(required=False, default=constants.RESPONSE_OK)
 
 
 # Projects
 
 class BitbucketProjectsRequest(BitbucketRequest):
-    name = serializers.CharField(required=False)  # filter for project name
+    name_filter = serializers.CharField(required=False)  # filter for project name
     permission = serializers.ChoiceField(required=False, choices=constants.BITBUCKET_PROJECT_PERMISSIONS,
                                          default=constants.PROJECT_READ)
 
@@ -75,6 +76,9 @@ class BitbucketCommitsRequest(BitbucketRequest):
     include_counts = serializers.BooleanField(
         required=False
     )  # optionally include the total number of commits and total number of unique authors
+    include_tags = serializers.BooleanField(
+        required=False, default=False
+    )  # optionally include tags on commits history
 
 
 class Author(serializers.Serializer):
@@ -90,6 +94,7 @@ class BitbucketCommitDetails(serializers.Serializer):
     date = KatkaDateTimeField(required=False, source='committerTimestamp')
     message = serializers.CharField(required=False)
     author = Author(required=False)
+    tags = serializers.ListField(child=serializers.CharField(), required=False, default=list())
 
 
 class BitbucketCommitsResponse(BitbucketResponse):

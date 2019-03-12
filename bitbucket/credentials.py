@@ -34,7 +34,7 @@ class KatkaCredentialsService(CredentialsProvider, KatkaService):
         path = f'{self.base_path}/{self.credential}/secrets/{settings.CREDENTIALS_ACCESS_TOKEN_KEY}/'
         url = f'{self.base_url}/{path}'
 
-        resp = super().get(url)
+        resp = self.get(url)
 
         with katka_service_exception_to_api():
             resp.raise_for_status()
